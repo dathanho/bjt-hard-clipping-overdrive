@@ -5,11 +5,11 @@
 
 **Circuit Schematic**:
 <br>
-<img src="images/final-circuit-schematic.png" width="95%">
+<img src="images/final-circuit-schematic.png" width="90%">
 
 **Physical Prototype Setup**:
 <br>
-<img src="images/entire-prototype-setup.jpeg" width="95%">
+<img src="images/entire-prototype-setup.jpeg" width="90%">
 
 ---
 
@@ -28,7 +28,7 @@ Since I only had theoretical knowledge of analog circuits and little design prac
 <br>
 
 <div align="center">
-    <img src="images/lpb-1-circuit-schematic.png" alt="LPB-1 Schematic" width="80%">
+    <img src="images/lpb-1-circuit-schematic.png" alt="LPB-1 Schematic" width="70%">
     <p><i>[1] LPB-1 Circuit Schematic.</i></p>
 </div>
 
@@ -37,7 +37,7 @@ The LPB-1 is a simple guitar pedal that features a single NPN bipolar junction t
 <br>
 
 <div align="center">
-    <img src="images/electra-distortion-schematic.png" alt="Electra Distortion Schematic" width="80%">
+    <img src="images/electra-distortion-schematic.png" alt="Electra Distortion Schematic" width="70%">
     <p><i>[2] Electra Distortion Schematic.</i></p>
 </div>
 
@@ -60,7 +60,7 @@ So, I soldered 22 AWG wire to each of the jack terminals and color coded accordi
 After crudely putting together a cardboard enclosure and attaching the jacks, I ended up with a movable guitar jack box:
 
 <div align="center">
-    <img src="images/input-output-jack-enclosure.jpeg" alt="Cardboard Jack Enclosure" width="80%">
+    <img src="images/input-output-jack-enclosure.jpeg" alt="Cardboard Jack Enclosure" width="70%">
     <p><i>[3] Cardboard Jack Enclosure.</i><p>
 </div>
 
@@ -84,7 +84,7 @@ I twisted the guitar input wire with the ground wire to form a twisted pair. Thi
 For basic switching functionality, I will be using a 3PDT (Triple-Pole, Double-Throw) switch to engage and disengage the circuit. That switch will be connected to a red LED which indicates whether or not the effect is on. A green LED will be connected straight from the battery to ground, indicating when the ring is bridged to the sleeve and the circuit has power. 
 
 <div align="center">
-    <img src="images/3pdt-switch–schematic.png" alt="3PDT Schematic" width="90%">
+    <img src="images/3pdt-switch–schematic.png" alt="3PDT Schematic" width="80%">
     <p><i>[4] Schematic of Simulated 3PDT Switch.</i><p>
 </div>
 
@@ -107,7 +107,7 @@ Since LTspice does not have a native 3PDT component, I had to simulate one using
 Next up is the setup for the power and status LEDs.
 
 <div align="center">
-    <img src="images/power-and-status.png" alt ="Power and Status LEDs Schematic" width="90%">
+    <img src="images/power-and-status.png" alt ="Power and Status LEDs Schematic" width="80%">
     <p><i>[5] Schematic of Power and Status LEDs Setup.</i><p>
 </div>
 
@@ -118,7 +118,7 @@ You will also note the additions of C6 and C7. I included these in the design wh
 ### c. Gain Stage
 
 <div align="center">
-    <img src="images/gain-boost-stage.png" alt="Schematic of Custom Gain Stage" width="90%">
+    <img src="images/gain-boost-stage.png" alt="Schematic of Custom Gain Stage" width="80%">
     <p><i>[6] Schematic of Custom Gain Boost Stage.</i><p>
 </div>
 
@@ -231,7 +231,7 @@ R4 prevents parasitic oscillations from unwanted LC networks by dampening the re
 ### d. Clipping Stage
 
 <div align="center">
-    <img src="images/diode-clipping-stage.png" alt="Schematic of Custom Diode Clipping Stage" width="90%">
+    <img src="images/diode-clipping-stage.png" alt="Schematic of Custom Diode Clipping Stage" width="80%">
     <p><i>[7] Schematic of Custom Diode Clipping Stage.</i></p>
     <p><i>Note: VR1 and C4 are not part of this stage.</i></p>
 </div>
@@ -259,7 +259,7 @@ This resistor limits the current flowing through the diodes, which softens the k
 ### e. Output Buffer Stage
 
 <div align="center">
-    <img src="images/output-buffer-stage.png" alt="Schematic of Custom Output Buffer Stage" width="90%">
+    <img src="images/output-buffer-stage.png" alt="Schematic of Custom Output Buffer Stage" width="80%">
     <p><i>[8] Schematic of Custom Output Buffer Stage.</i></p>
 </div>
 
@@ -296,12 +296,12 @@ This component was essentially the entire reason for adding the buffer. I wanted
 ## 3. Results & Improvements
 
 <div align="center">
-    <img src="images/effects-circuit-schematic.png" alt="Final Effects Circuit" width="100%">
+    <img src="images/effects-circuit-schematic.png" alt="Final Effects Circuit" width="90%">
     <p><i>[9] Schematic of Final Effects Circuit.</i></p>
 </div>
 
 <div align="center">
-    <img src="images/close-up-physical-prototype.jpeg" alt="Physical Effects Circuit Prototype" width="100%">
+    <img src="images/close-up-physical-prototype.jpeg" alt="Physical Effects Circuit Prototype" width="90%">
     <p><i>[10] Effects Circuit Breadboard Prototype.</i></p>
 </div>
 
