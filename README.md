@@ -27,19 +27,19 @@ Since I only had theoretical knowledge of analog circuits and little design prac
 
 <br>
 
-<figure align="center">
-    <img src="images/lpb-1-circuit-schematic.png" alt="LPB-1 Schematic" width="90%">
-    <figcaption><i>[1] LPB-1 Circuit Schematic.</i></figcaption>
-</figure>
+<div align="center">
+    <img src="images/lpb-1-circuit-schematic.png" alt="LPB-1 Schematic" width="80%">
+    <p><i>[1] LPB-1 Circuit Schematic.</i></p>
+</div>
 
 The LPB-1 is a simple guitar pedal that features a single NPN bipolar junction transistor (BJT) configured as a common emitter (CE) amplifier to cleanly boost volume. This common emitter amplifier uses voltage divider biasing.
 
 <br>
 
-<figure align="center">
-    <img src="images/electra-distortion-schematic.png" alt="Electra Distortion Schematic" width="90%">
-    <figcaption><i>[2] Electra Distortion Schematic.</i></figcaption>
-</figure>
+<div align="center">
+    <img src="images/electra-distortion-schematic.png" alt="Electra Distortion Schematic" width="80%">
+    <p><i>[2] Electra Distortion Schematic.</i></p>
+</div>
 
 The Electra Distortion is a classic guitar effects circuit, which features a single NPN BJT configured as a common emitter amplifier with the output signal connected to antiparallel shunt diodes for a distortion effect. This common emitter amplifier uses collector feedback biasing. 
 
@@ -59,10 +59,10 @@ So, I soldered 22 AWG wire to each of the jack terminals and color coded accordi
 
 After crudely putting together a cardboard enclosure and attaching the jacks, I ended up with a movable guitar jack box:
 
-<figure align="center">
+<div align="center">
     <img src="images/input-output-jack-enclosure.jpeg" alt="Cardboard Jack Enclosure" width="80%">
-    <figcaption><i>[3] Cardboard Jack Enclosure.</i><figcaption>
-</figure>
+    <p><i>[3] Cardboard Jack Enclosure.</i><p>
+</div>
 
 It looks a little silly but for now gets the job done. The purpose of each wire is listed in the table: 
 
@@ -83,10 +83,10 @@ I twisted the guitar input wire with the ground wire to form a twisted pair. Thi
 
 For basic switching functionality, I will be using a 3PDT (Triple-Pole, Double-Throw) switch to engage and disengage the circuit. That switch will be connected to a red LED which indicates whether or not the effect is on. A green LED will be connected straight from the battery to ground, indicating when the ring is bridged to the sleeve and the circuit has power. 
 
-<figure align="center">
-    <img src="images/3pdt-switch–schematic.png" alt="3PDT Schematic" width="85%">
-    <figcaption><i>[4] Schematic of Simulated 3PDT Switch.</i><figcaption>
-</figure>
+<div align="center">
+    <img src="images/3pdt-switch–schematic.png" alt="3PDT Schematic" width="90%">
+    <p><i>[4] Schematic of Simulated 3PDT Switch.</i><p>
+</div>
 
 Since LTspice does not have a native 3PDT component, I had to simulate one using 6 SPST switches and voltage sources. 
 
@@ -106,10 +106,10 @@ Since LTspice does not have a native 3PDT component, I had to simulate one using
 
 Next up is the setup for the power and status LEDs.
 
-<figure align="center">
+<div align="center">
     <img src="images/power-and-status.png" alt ="Power and Status LEDs Schematic" width="90%">
-    <figcaption><i>[5] Schematic of Power and Status LEDs Setup.</i><figcaption>
-</figure>
+    <p><i>[5] Schematic of Power and Status LEDs Setup.</i><p>
+</div>
 
 This schematic was made just to show how the power and LED switching would work. When the ring and sleeve are bridge together, the battery is connected to ground and the circuit is powered. Once the circuit is powered, the green POWER_STATUS LED will light up. If the effect is engaged, LED_Neg would be connected to ground and the LED (red) will light up.
 
@@ -117,10 +117,10 @@ You will also note the additions of C6 and C7. I included these in the design wh
 
 ### c. Gain Stage
 
-<figure align="center">
+<div align="center">
     <img src="images/gain-boost-stage.png" alt="Schematic of Custom Gain Stage" width="90%">
-    <figcaption><i>[6] Schematic of Custom Gain Boost Stage.</i><figcaption>
-</figure>
+    <p><i>[6] Schematic of Custom Gain Boost Stage.</i><p>
+</div>
 
 In this section, I'll discuss each component of the gain stage and the values I chose for them. 
 
@@ -230,11 +230,11 @@ R4 prevents parasitic oscillations from unwanted LC networks by dampening the re
 
 ### d. Clipping Stage
 
-<figure align="center">
+<div align="center">
     <img src="images/diode-clipping-stage.png" alt="Schematic of Custom Diode Clipping Stage" width="90%">
-    <figcaption><i>[7] Schematic of Custom Diode Clipping Stage.</i></figcaption>
-    <figcaption><i>Note: VR1 and C4 are not part of this stage.</i></figcaption>
-</figure>
+    <p><i>[7] Schematic of Custom Diode Clipping Stage.</i></p>
+    <p><i>Note: VR1 and C4 are not part of this stage.</i></p>
+</div>
 
 I'll go over the asymmetrical clipping diode configuration in this section. Like the last section, I will try to describe in chronological order.
 
@@ -258,10 +258,10 @@ This resistor limits the current flowing through the diodes, which softens the k
 
 ### e. Output Buffer Stage
 
-<figure align="center">
+<div align="center">
     <img src="images/output-buffer-stage.png" alt="Schematic of Custom Output Buffer Stage" width="90%">
-    <figcaption><i>[8] Schematic of Custom Output Buffer Stage.</i></figcaption>
-</figure>
+    <p><i>[8] Schematic of Custom Output Buffer Stage.</i></p>
+</div>
 
 With the gain pot changing the aggressiveness of the distortion, I wanted another potentiometer to act as the master volume. The issue is that attaching it directly to the output from the gain pot would significantly load down the output signal and increase output impedance. Therefore, I decided to add an emitter follower to act as a voltage buffer.
 
@@ -295,15 +295,15 @@ This component was essentially the entire reason for adding the buffer. I wanted
 
 ## 3. Results & Improvements
 
-<figure align="center">
+<div align="center">
     <img src="images/effects-circuit-schematic.png" alt="Final Effects Circuit" width="100%">
-    <figcaption><i>[9] Schematic of Final Effects Circuit.</i></figcaption>
-</figure>
+    <p><i>[9] Schematic of Final Effects Circuit.</i></p>
+</div>
 
-<figure align="center">
+<div align="center">
     <img src="images/close-up-physical-prototype.jpeg" alt="Physical Effects Circuit Prototype" width="100%">
-    <figcaption><i>[10] Effects Circuit Breadboard Prototype.</i></figcaption>
-</figure>
+    <p><i>[10] Effects Circuit Breadboard Prototype.</i></p>
+</div>
 
 [Audio Samples and Video Demonstration Coming Soon]
 
